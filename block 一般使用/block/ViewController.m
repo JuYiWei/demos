@@ -36,6 +36,12 @@
         return [NSString stringWithFormat:@"%@+%@",button.titleLabel.text,title];
     }];
 
+    
+    [TestView calculateA:2 b:-2 zero:^{
+        NSLog(@"一库");
+    } other:^{
+        NSLog(@"a sa ki");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
