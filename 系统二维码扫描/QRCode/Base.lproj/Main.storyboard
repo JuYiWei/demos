@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Iy1-vn-Qlq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hna-3b-xnw">
+                                <rect key="frame" x="20" y="235" width="75" height="30"/>
+                                <state key="normal" title="扫描二维码"/>
+                                <connections>
+                                    <action selector="scanWithCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vui-kT-wmt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描结果：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-Jr-mJg">
+                                <rect key="frame" x="20" y="164" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12345.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZFg-88-Q6B">
+                                <rect key="frame" x="250" y="400" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="27f-G4-6Uo"/>
+                                    <constraint firstAttribute="width" constant="100" id="kNG-pF-4lp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M04-SC-Cep">
+                                <rect key="frame" x="20" y="315" width="105" height="30"/>
+                                <state key="normal" title="扫描图中二维码"/>
+                                <connections>
+                                    <action selector="scanWithImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcI-OQ-3R2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyV-cz-6FQ">
+                                <rect key="frame" x="125" y="164" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EyV-cz-6FQ" firstAttribute="leading" secondItem="h0d-Jr-mJg" secondAttribute="trailing" constant="20" id="57t-EV-SgD"/>
+                            <constraint firstItem="h0d-Jr-mJg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8WW-mH-Bws"/>
+                            <constraint firstItem="ZFg-88-Q6B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hW-Mi-eTt"/>
+                            <constraint firstItem="M04-SC-Cep" firstAttribute="leading" secondItem="Hna-3b-xnw" secondAttribute="leading" id="Cn1-dB-VWw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZFg-88-Q6B" secondAttribute="bottom" constant="100" id="OaZ-1v-IUf"/>
+                            <constraint firstItem="EyV-cz-6FQ" firstAttribute="centerY" secondItem="h0d-Jr-mJg" secondAttribute="centerY" id="Opj-TK-zIg"/>
+                            <constraint firstItem="Hna-3b-xnw" firstAttribute="top" secondItem="h0d-Jr-mJg" secondAttribute="bottom" constant="50" id="Q91-gJ-mzg"/>
+                            <constraint firstItem="h0d-Jr-mJg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ZcB-hf-QxG"/>
+                            <constraint firstItem="M04-SC-Cep" firstAttribute="top" secondItem="Hna-3b-xnw" secondAttribute="bottom" constant="50" id="dwn-lR-N2s"/>
+                            <constraint firstItem="Hna-3b-xnw" firstAttribute="leading" secondItem="h0d-Jr-mJg" secondAttribute="leading" id="fE3-JQ-yOU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="en3-yD-ude"/>
+                    <connections>
+                        <outlet property="qrImage" destination="ZFg-88-Q6B" id="WVQ-v9-3QC"/>
+                        <outlet property="result" destination="EyV-cz-6FQ" id="yJg-37-7RE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jiO-cH-I3O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iy1-vn-Qlq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FHa-kU-FCc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Usp-bE-0H3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNW-Gr-KqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="984"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="12345.png" width="300" height="300"/>
+    </resources>
+</document>
