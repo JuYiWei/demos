@@ -147,6 +147,32 @@
     }
 }
 
+
++ (UIImage *)createQRImageWithContent:(NSString *)content scale:(CGFloat)scale {
+    
+    NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding]; // NSISOLatin1StringEncoding 编码
+
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setValue:data forKey:@"inputMessage"];
+    [filter setValue:@"M" forKey:@"inputCorrectionLevel"];// L: 7% M: 15% Q: 25% H: 30%
+    
+    CIImage *outputImage = filter.outputImage;
+
+    CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale); // scale 为放大倍数
+    CIImage *transformImage = [outputImage imageByApplyingTransform:transform];
+
+    // 保存
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef imageRef = [context createCGImage:transformImage fromRect:transformImage.extent];
+    UIImage *qrCodeImage = [UIImage imageWithCGImage:imageRef];
+    
+    CGImageRelease(imageRef);
+    
+    return qrCodeImage;
+}
+
+
+
 @end
 
 

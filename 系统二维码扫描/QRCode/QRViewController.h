@@ -32,5 +32,8 @@
 /*! 扫描图中二维码 */
 - (NSString *)scanQRCodeFromImage;
 
+/*! 生成二维码 */
++ (UIImage *)createQRImageWithContent:(NSString *)content scale:(CGFloat)scale;
+
 @end
 

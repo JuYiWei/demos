@@ -45,4 +45,13 @@
     self.result.text = result;
 }
 
+
+- (IBAction)createQRImage:(id)sender {
+    
+    self.qrImage.image = [UIImage createQRImageWithContent:@"瓦特" scale:5.];
+}
+
+
+
+
 @end

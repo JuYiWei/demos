@@ -50,6 +50,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-Cg-Ppk">
+                                <rect key="frame" x="20" y="395" width="75" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="createQRImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyj-O7-wcJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -63,6 +70,8 @@
                             <constraint firstItem="h0d-Jr-mJg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ZcB-hf-QxG"/>
                             <constraint firstItem="M04-SC-Cep" firstAttribute="top" secondItem="Hna-3b-xnw" secondAttribute="bottom" constant="50" id="dwn-lR-N2s"/>
                             <constraint firstItem="Hna-3b-xnw" firstAttribute="leading" secondItem="h0d-Jr-mJg" secondAttribute="leading" id="fE3-JQ-yOU"/>
+                            <constraint firstItem="ceh-Cg-Ppk" firstAttribute="leading" secondItem="M04-SC-Cep" secondAttribute="leading" id="kEf-pQ-I7Y"/>
+                            <constraint firstItem="ceh-Cg-Ppk" firstAttribute="top" secondItem="M04-SC-Cep" secondAttribute="bottom" constant="50" id="uL8-Ur-455"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="en3-yD-ude"/>
