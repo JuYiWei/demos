@@ -1,0 +1,13 @@
+
+
+
+platform:ios,'8.0'
+
+target 'lottie' do
+
+
+pod 'lottie-ios'
+
+
+end
+
