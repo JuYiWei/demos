@@ -2,4 +2,85 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCode/JYWQRTool.m"
+            timestampString = "546166759.481668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCode/JYWQRTool.m"
+            timestampString = "546166791.347993"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-startCapture"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[JYWQRTool startCapture]_block_invoke"
+                  moduleName = "QRCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyiwei/%E6%88%91%E7%9A%84%E8%B5%84%E6%96%99%E5%8C%BA/github/Demo/%E7%B3%BB%E7%BB%9F%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/QRCode/JYWQRTool.m"
+                  timestampString = "546166791.67487"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__25-[JYWQRTool startCapture]_block_invoke_2"
+                  moduleName = "QRCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyiwei/%E6%88%91%E7%9A%84%E8%B5%84%E6%96%99%E5%8C%BA/github/Demo/%E7%B3%BB%E7%BB%9F%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/QRCode/JYWQRTool.m"
+                  timestampString = "546166791.677555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.52"
+                  moduleName = "QRCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juyiwei/%E6%88%91%E7%9A%84%E8%B5%84%E6%96%99%E5%8C%BA/github/Demo/%E7%B3%BB%E7%BB%9F%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%89%AB%E6%8F%8F/QRCode/JYWQRTool.m"
+                  timestampString = "546166791.679544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

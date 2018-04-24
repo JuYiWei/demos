@@ -9,6 +9,7 @@
 #import "QRViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "QRScanView.h"
+//#import "JYWQRTool.h"
 
 #define CZScanLeftAndRightPadding 30
 #define CZScanTopPadding 100
@@ -71,17 +72,24 @@
 
 - (void)startCapture {
     dispatch_async(dispatch_get_main_queue(), ^{
-        AVCaptureSession *session = [[AVCaptureSession alloc] init];
+        AVCaptureSession *session = [[AVCaptureSession alloc]init];
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         NSError *error;
         AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
         if (deviceInput) {
-            [session addInput:deviceInput];
+            if ([session canAddInput:deviceInput]) {
+                [session addInput:deviceInput];
+            }
             
             AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
             [metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-            [session addOutput:metadataOutput]; // 这行代码要在设置 metadataObjectTypes 前
+            if ([session canAddOutput:metadataOutput]) {
+                [session addOutput:metadataOutput]; // 这行代码要在设置 metadataObjectTypes 前
+            }
             metadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+            
+            
+            
             
             AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;

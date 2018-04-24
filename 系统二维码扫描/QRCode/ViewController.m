@@ -9,6 +9,7 @@
 
 #import "ViewController.h"
 #import "QRViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *result;
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
