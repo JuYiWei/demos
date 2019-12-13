@@ -1,0 +1,14 @@
+
+
+Demo 可拆分以下 pod 库，且相互独立
+
+// 基础组件
+Common
+
+// 中间者
+Mediator
+
+// 业务模块
+Shop
+Order
+...
